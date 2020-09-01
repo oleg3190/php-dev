@@ -5,7 +5,7 @@
 - На локальной машине открываем терминал, и (например) в домашней директории разворачиваем проект, после чего переходим в его директорию:
 
 ```bash
-$ git clone https://github.com/oleg3190/avtocod-php-developer-test-tas
+$ git clone https://github.com/oleg3190/php-dev
 $ cd $_
 ```
 
