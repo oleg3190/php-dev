@@ -1,9 +1,4 @@
-<p align="center">
-  <img alt="avtocod" src="https://avatars1.githubusercontent.com/u/32733112?s=70&v=4" width="70" height="70" />
-</p>
-
 # Стена сообщений
-
 
 ## :fire: Как развернуть проект
 
@@ -19,28 +14,45 @@ $ cd $_
 ```bash
 composer update
 ```
-- Теперь необходимо переименовать .env.example в .env
 
+# Для запуска проекта в docker
 
-- После чего выполняем команды:
+- Переходим в директорию data env.docker переименовываем в .env
+
+- переходим в директорию laradock в корневой папке проекта.
+
+- открываем консоль и пишем команду docker-compose up -d
+
+- пишем docker-compose exec workspace bash
+- php artisan migrate
+- переходим в браузер и открываем localhost:60
+
+# Для запуска проекта локально
+
+- Переходим в директорию data env.local переименовываем в .env
+
+- Выполняем команды:
 
 ```bash
 php artisan migrate
-php artisan db:seed
 ```
+
 - Для работы приложения понадобится redis:
 
 ```bash
 ссылка для windows
 https://github.com/microsoftarchive/redis/releases/tag/win-3.2.100
 ```
+
 - После установки необходимо запустить файл redis-cli.exe из директории redis и проверить его работу командой ping. В ответ должно прийти pong
 
 - Далее выполнить комманды
+
 ```bash
 php artisan queue:work
 laravel-echo-server start
 ```
+
 - Для запуска проекта:
 
 ```bash
@@ -52,4 +64,3 @@ php artisan serve
 ```bash
 vendor\bin\phpunit
 ```
-
